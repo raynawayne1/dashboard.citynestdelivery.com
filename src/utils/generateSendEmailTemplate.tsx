@@ -1,0 +1,149 @@
+export function generateSendEmailTemplate(
+  name: string,
+  purpose: string,
+  subject: string,
+  message: string
+): string {
+  return `
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${subject}</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background: #f0f4f8;
+      color: #000;
+      transition: color 0.3s ease;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(1, 111, 185, 0.08);
+      border-top: 6px solid #016FB9;
+      padding: 28px 32px 36px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 26px;
+    }
+
+    .logo img {
+      width: 160px;
+      height: auto;
+    }
+
+    .greeting {
+      font-size: 16px;
+      font-weight: 600;
+      color: #013766;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.65;
+      margin: 0 0 16px 0;
+      color: #000;
+    }
+
+    .purpose {
+      background: #f9fbff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      max-width: 460px;
+      margin: 0 auto 28px;
+      box-shadow: 0 2px 6px rgba(1, 111, 185, 0.05);
+      border: 1px solid #c6d6f9;
+      font-weight: 600;
+      color: #016FB9;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      margin-top: 32px;
+      line-height: 1.45;
+    }
+
+    .signature {
+      font-size: 15px;
+      font-weight: 600;
+      color: #224976;
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    a {
+      color: #016FB9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        margin: 20px 15px;
+        padding: 25px 20px 30px;
+        max-width: 100%;
+      }
+
+      .purpose {
+        max-width: 100%;
+      }
+
+      .logo img {
+        width: 140px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+      <center>
+           <div class="logo" style="display: flex; justify-content: center; align-items: center;">
+            <img src="https://citynestdelivery.com/images/logo.png" alt="logo" border="0" />
+            </div>
+        </center>
+    <p class="greeting">Hello <b>${name}</b>,</p>
+
+    <div class="purpose">${purpose}</div>
+
+    <p>${message}</p>
+
+    <p class="footer-text">
+      If you have any questions or need assistance, please do not hesitate to contact us.
+    </p>
+
+    <p class="signature">Yours sincerely,</p>
+    <p class="signature"><a href="https://orbitdel.com/">citynestdelivery.com	</a></p>
+  </div>
+</body>
+
+</html>
+  `;
+}
