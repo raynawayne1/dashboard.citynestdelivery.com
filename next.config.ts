@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "lh3.googleusercontent.com" },
       { protocol: "https", hostname: "orbitdel.com" },
+      {protocol:"https", hostname:"citynestdelivery.com"}
     ],
   },
 
