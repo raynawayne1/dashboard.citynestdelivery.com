@@ -2,7 +2,7 @@ import { useState } from "react";
 import { updateDoc, doc, arrayUnion, getDoc } from "firebase/firestore";
 import { db } from "../../db/firebase";
 import { toast } from "react-toastify";
-import { AddDropFormData } from "@/app/admin/(others-pages)/shippings/view/add-drop-locaton/[id]/page";
+import { AddDropFormData } from "../../app/admin/(others-pages)/shippings/view/add-drop-locaton/[id]/page";
 import { useAuth } from "../../Authcontext/AuthContext";
 import { generateShippingDropLocationEmail } from "@/utils/generateShippingDropLocationEmail";
 import { sendEmailNotification } from "@/utils/emailService";

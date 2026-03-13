@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/config/ZodSchema.ts",
-    "src/app/page.tsx",
+    "app/page.tsx",
     "src/components/form/MultiSelectAdd.tsx",
     "src/components/MyVanillaComponent/MyVanillaComponent.tj",
     ".next/dev/types/**/*.ts"
